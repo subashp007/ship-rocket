@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+body {
+  font-family: TWKLausane, sans-serif;
+}
+
+@theme {
+  --clipPath-shape: polygon(33% 28%, 66% 28%, 66% 0, 100% 0, 100% 99%, 0 100%, 0 0, 33% 0);
+  --color-background-100: #764abc;
+  --color-lilac-100: #eabad2;
+  --color-light-100: #eae3f5;
+  --color-regal-blue: #243c5a;
+
+  --font-manrope: Manrope, sans-serif;
+  --font-TWKLausanne: TWKLausanne, sans-serif;
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee-dev: marquee-dev 5s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 30s linear infinite;
+  --animate-fade-in-scale: fade-in-scale 0.3s ease-out;
+
+  
+  @keyframes marquee {
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes marquee-dev {
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee-reverse {
+    0% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes fade-in-scale {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(0.5);
+    }
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
